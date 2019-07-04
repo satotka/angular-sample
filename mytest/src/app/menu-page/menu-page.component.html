@@ -1,0 +1,16 @@
+<h1>function Menu</h1>
+<button (click)="NewTab()">New Tab</button>
+<h1>tab list</h1>
+<div *ngFor="let tab of tabList">
+    <span (click)="tab_click(tab)">{{tab.title}}</span>
+    <button (click)="tab_delete(tab)">Delete</button>
+    <span *ngIf='IsSelected(tab)'>****</span>
+</div>
+
+<h1>search condition</h1>
+<p>{{selectedTab.filters}}</p>
+
+<h1>item list</h1>
+<div *ngFor="let item of filterdItems()">
+    <p>{{item.name}}, {{item.type}}</p>
+</div>
