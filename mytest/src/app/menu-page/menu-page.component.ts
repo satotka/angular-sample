@@ -16,8 +16,8 @@ export class MenuPageComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-      { name: 'item1', complete: false, type: "装置" },
-      { name: 'item2', complete: false, type: "エリア" }
+      { name: 'item1', complete: false, type: '装置' },
+      { name: 'item2', complete: false, type: 'エリア' }
     ];
 
     this.tabList = [
@@ -34,7 +34,7 @@ export class MenuPageComponent implements OnInit {
 
   NewTab() {
     this.tabList.push(
-      { title: 'new', selected: false, filters: [] }
+      { title: 'new', selected: false, filters: ['その他'] }
     );
   }
 
@@ -43,7 +43,7 @@ export class MenuPageComponent implements OnInit {
   }
 
   filterdItems() {
-    return this.items.filter(i => i.type === 'エリア');
+    return this.items.filter(i => this.selectedTab.filters.includes(i.type));
   }
 
   tab_delete(tab) {
