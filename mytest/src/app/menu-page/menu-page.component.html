@@ -1,16 +1,32 @@
-<h1>function Menu</h1>
-<button (click)="NewTab()">New Tab</button>
-<h1>tab list</h1>
-<div *ngFor="let tab of tabList">
-    <span (click)="tab_click(tab)">{{tab.title}}</span>
-    <button (click)="tab_delete(tab)">Delete</button>
-    <span *ngIf='IsSelected(tab)'>****</span>
-</div>
+<h1>functional menu sample</h1>
+<nav>
+    <h2>dynamic tab list</h2>
+    <span *ngFor="let tab of tabList">
+        <button (click)="tab_click(tab)">
+            {{tab.title}}<span *ngIf='IsSelected(tab)'>*</span>
+        </button>
+        <button (click)="tab_delete(tab)">-</button>
+    </span>
+    <button (click)="NewTab()">+</button>
+</nav>
 
-<h1>search condition</h1>
-<p>{{selectedTab.filters}}</p>
+<hr />
+<h2>search condition</h2>
+<span *ngFor="let filter of selectedTab.filters">
+    <button> {{filter}} </button>
+</span>
 
-<h1>item list</h1>
-<div *ngFor="let item of filterdItems()">
-    <p>{{item.name}}, {{item.type}}</p>
-</div>
+<hr />
+<h2>filtered item list</h2>
+<table>
+    <thead>
+        <th>name</th>
+        <th>type</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of filterdItems()">
+            <td>{{item.name}}</td>
+            <td>{{item.type}}</td>
+        </tr>
+    </tbody>
+</table>
