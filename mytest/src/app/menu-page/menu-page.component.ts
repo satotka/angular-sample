@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { not } from '@angular/compiler/src/output/output_ast';
+import { Item } from '../item';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-menu-page',
@@ -9,16 +10,14 @@ import { not } from '@angular/compiler/src/output/output_ast';
 export class MenuPageComponent implements OnInit {
 
   tabList: any;
-  items: any;
+  items: Item[];
   selectedTab: any;
 
-  constructor() { }
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.items = [
-      { name: 'item1', complete: false, type: '装置' },
-      { name: 'item2', complete: false, type: 'エリア' }
-    ];
+
+    this.getItems();
 
     this.tabList = [
       { title: 'tab1', filters: ['エリア', '装置'] },
@@ -26,6 +25,10 @@ export class MenuPageComponent implements OnInit {
       { title: 'tab3', filters: ['装置'] },
     ];
     this.selectedTab = this.tabList[0];
+  }
+
+  getItems(): void {
+    this.items =  this.itemService.getItems();
   }
 
   tab_click(tab) {
