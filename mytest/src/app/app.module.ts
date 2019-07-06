@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
-import { ItemsComponent } from './items/items.component';
+import { ItemsComponent } from './item-list/item-list.component';
 
 @NgModule({
   declarations: [

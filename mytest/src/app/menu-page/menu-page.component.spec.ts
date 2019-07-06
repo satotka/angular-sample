@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuPageComponent } from './menu-page.component';
-import { ItemsComponent } from '../items/items.component';
+import { ItemsComponent } from '../item-list/item-list.component';
 
 describe('MenuPageComponent', () => {
   let component: MenuPageComponent;

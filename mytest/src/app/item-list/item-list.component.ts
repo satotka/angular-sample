@@ -3,8 +3,8 @@ import { Item } from '../item';
 
 @Component({
   selector: 'app-items',
-  templateUrl: './items.component.html',
-  styleUrls: ['./items.component.css']
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.css']
 })
 export class ItemsComponent implements OnInit {
 
