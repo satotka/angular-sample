@@ -50,7 +50,7 @@ export class MenuPageComponent implements OnInit {
     if (this.tabList.length === 1) {
       return;
     }
-    this.tabList = this.tabList.filter((t)=>{return tab !== t;});
+    this.tabList = this.tabList.filter(t => tab !== t);
     if (this.selectedTab === tab) {
       this.selectedTab = this.tabList[0];
     }
