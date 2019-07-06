@@ -17,16 +17,5 @@
 </span>
 
 <hr />
-<h2>filtered item list</h2>
-<table>
-    <thead>
-        <th>name</th>
-        <th>type</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of filterdItems()">
-            <td>{{item.name}}</td>
-            <td>{{item.type}}</td>
-        </tr>
-    </tbody>
-</table>
+<app-items [items]="filterdItems()"></app-items>
+
