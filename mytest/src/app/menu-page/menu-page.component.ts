@@ -4,8 +4,7 @@ import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-menu-page',
-  templateUrl: './menu-page.component.html',
-  styleUrls: ['./menu-page.component.css']
+  templateUrl: './menu-page.component.html'
 })
 export class MenuPageComponent implements OnInit {
 
