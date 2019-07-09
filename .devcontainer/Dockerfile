@@ -36,5 +36,5 @@ ENV DEBIAN_FRONTEND=dialog
 # Set the default shell to bash instead of sh
 ENV SHELL /bin/bash
 
-# Install angular cli
-RUN npm install -g @angular/cli
+# Install angular cli ver.7, that needs by onsen-ui (ngx-onsenui@^7.0.0).
+RUN npm install -g @angular/cli@^7.0.0
