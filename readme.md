@@ -1,7 +1,7 @@
 # angular-sample
 
 - fshop is tutorial with angular(v.8): https://angular.jp/start
-- mytest is sample for using angular(v.7)
+- mytest is sample for using angular(v.8)
 
 ## usage
 
